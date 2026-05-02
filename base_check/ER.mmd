@@ -1,0 +1,43 @@
+```mermaid
+erDiagram
+    countries ||--o{ players : "belongs_to"
+    countries ||--o{ pairings : "home_team"
+    countries ||--o{ pairings : "away_team"
+    pairings ||--o{ goals : "match_goals"
+    players ||--o{ goals : "player_goals"
+
+    countries {
+        int id PK
+        string name
+        int ranking
+        string group_name
+    }
+
+    players {
+        int id PK
+        int country_id FK
+        int uniform_num
+        string position
+        string name
+        string club
+        date birth
+        int height
+        int weight
+    }
+
+    pairings {
+        int id PK
+        datetime kickoff
+        int my_country_id FK
+        int enemy_country_id FK
+    }
+
+    goals {
+        int id PK
+        int pairing_id FK
+        int player_id FK
+        string goal_time
+    }
+
+
+```

@@ -1,0 +1,4 @@
+SELECT DISTINCT
+    p.POSITION
+FROM
+    players p
