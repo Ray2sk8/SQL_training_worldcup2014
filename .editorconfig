@@ -1,0 +1,12 @@
+root = true
+
+[*.cs]
+# インデント設定
+indent_style = space
+indent_size = 4
+
+#### C# フォーマット設定 ####
+
+# クラス、構造体などの型宣言における波括弧を同じ行に配置する
+csharp_new_line_before_open_brace = accessors, anonymous_methods, anonymous_types, control_blocks, events, indexers, lambdas, local_functions, methods, properties
+# ↑ ここから "types" を除外することで「class person{」の形式になります。
